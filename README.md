@@ -31,7 +31,7 @@ A markdown based blog application built with nodejs with simple CRUD operation.
   <br>
   <br>
   <img src="public/screenshots/add_new.png" alt="New Page" width="95%">
-  <small> (Blog create form)</small>
+  <small> (Create form)</small>
   <br>
   <br>
 </div>
@@ -40,7 +40,7 @@ A markdown based blog application built with nodejs with simple CRUD operation.
   <br>
   <br>
   <img src="public/screenshots/edit.png" alt="Edit Page" width="95%">
-  <small> (Blog update form)</small>
+  <small> (Update form)</small>
   <br>
   <br>
 </div>
