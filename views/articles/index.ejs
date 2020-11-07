@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Blog</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+	<%- include('base') %>
+	
+	<div class="container">
+		<h1 class="mb-4 heading">All Blog Posts</h1>
+		<a href="/articles/new" class="btn btn-success">Add New Post</a>
+
+<!-- 		<% articles.forEach(article => { %>
+			<div class="card mt-4">
+				<div class="card-body">
+					<div class="card-title"><%= article.title %></div>
+					<div class="card-subtitle text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
+					<div class="card-text mb-2"><%= article.description %></div>
+					<a href="/articles/<%= article.slug %>" class='btn btn-primary' >Read More</a>
+					<a href="/articles/edit/<%= article.id %>" class='btn btn-info' >Edit</a>
+					<form action="articles/<%= article.id %>?_method=DELETE" method='POST' class='d-inline'>
+						<button type="submit" class="btn btn-danger">Delete</button>
+					</form>
+				</div>
+			</div>
+
+		<% }) %> -->
+
+		<section class="content">
+			<% articles.forEach(article => { %>
+				<div class="blog mt-4 mb-4">
+					<h2 class="mb-0">
+						<a href="/articles/<%= article.slug %>">
+							<%= article.title %>
+						</a>
+					</h2>
+					<div class="text-muted mb-3">
+						<%= article.createdAt.toLocaleDateString() %>
+					</div>
+					<div class="description">
+						<p><%= article.description %></p>
+					</div>
+					<div class="buttons">
+						<a type="button" class='btn btn-primary' href="/articles/<%= article.slug %>">Read More</a>
+						<a type='button' class="btn btn-info" href="/articles/edit/<%= article.id %>">Edit</a>
+						<form action="articles/<%= article.id %>?_method=DELETE" method='POST' class='d-inline'>
+							<button type="submit" class="btn btn-danger" >Delete</button>
+						</form>
+					</div>
+				</div>
+			<% }) %>
+		</section>
+	</div>
+
+</body>
+</html>

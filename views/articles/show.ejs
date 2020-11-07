@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title><%= article.title %></title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+</head>
+<body>
+
+	<%- include('base') %>
+
+<!-- 	<div class="container">
+		<h1 class="mb-1"><%= article.title %></h1>
+		<div class="text-muted mb-4"><%= article.createdAt.toLocaleDateString() %></div>
+		
+		<a href="/" class="btn btn-secondary">All Articles</a>
+		<a href="/articles/edit/<%= article.id %>" class='btn btn-info'>Edit</a>
+
+		<div>
+			<%- article.sanitizedHtml %>
+		</div>
+
+	</div> -->
+
+	<div class="container">
+		<section class="details">
+			<div class="blog mt-4 mb-4">
+				<h2 class="mb-0">
+					<a href="#">
+						<%= article.title %>
+					</a>
+				</h2>
+				<div class="text-muted mb-3">
+					<%= article.createdAt.toLocaleDateString() %>
+				</div>
+				<div class="mb-4">
+					<a type="button" class="btn-sm btn-secondary" href="/articles/edit/<%= article.id %>">Edit</a>
+					
+				</div>
+				<div class="blogContent">
+					<%- article.sanitizedHtml %>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

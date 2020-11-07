@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+ 	font-family: 'Montserrat', sans-serif;
+ 	margin: 0;
+}
+
+.top header a {
+	font-weight: bold;
+	font-size: 1.7rem;
+	text-decoration: none;
+}
+
+.heading{
+	font-weight: normal;
+	font-size: 4rem;
+}
+
+.blog h2 a {
+	font-weight: bold;
+	font-size: 3rem;
+	color: #114d4d;
+	text-decoration: none;
+}
+
+.blog h2 a:hover {
+	color: #236b77;
+}
+
+.buttons {
+	padding: 0 0 1.5em;
+}
+.buttons a {
+	padding-right: 1em;
+}
+
+.description p {
+	font-size: 1.4rem;
+}
+
+.details {
+	padding: 0 15% 0 15%;
+}
+
+.blogContent {
+	margin-top: 2.5em;
+	font-size: 1.4rem; 
+}
+
+.h2_heading{
+	font-weight: bold;
+	font-size: 3rem;
+	color: #114d4d;
+	text-decoration: none;
+	margin-bottom: 2rem;
+}
+
+.create_form{
+	width: 50%;
+}
